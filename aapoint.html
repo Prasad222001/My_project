@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="animated.css">  
+    <link rel="stylesheet" href="mainmod.css">  
+    <link rel="stylesheet" href="adminmod.css">
+        
+    <title>Appointments</title>
+    <style>
+        .popup{
+            animation: transitionIn-Y-bottom 0.5s;
+        }
+        .sub-table{
+            animation: transitionIn-Y-bottom 0.5s;
+        }
+</style>
+</head>
+<body>
+        <div class="container">
+        <div class="menu">
+            <table class="menu-container" border="0">
+                <tr>
+                    <td style="padding:10px" colspan="2">
+                        <table border="0" class="profile-container">
+                            <tr>
+                                <td width="30%" style="padding-left:20px" >
+                                    <img src="../img/user.png" alt="" width="100%" style="border-radius:50%">
+                                </td>
+                                <td style="padding:0px;margin:0px;">
+                                    <p class="profile-title">Administrator</p>
+                                    <p class="profile-subtitle">admin@edoc.com</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <a href="alogin.html" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                </td>
+                            </tr>
+                    </table>
+                    </td>
+                
+                </tr>
+                <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-dashbord" >
+                        <a href="adminmod.html" class="non-style-link-menu"><div><p class="menu-text">Dashboard</p></a></div></a>
+                    </td>
+                </tr>
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-doctor ">
+                        <a href="adoctor.html" class="non-style-link-menu "><div><p class="menu-text">Doctors</p></a></div>
+                    </td>
+                </tr>
+                <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-schedule ">
+                        <a href="asession.html" class="non-style-link-menu"><div><p class="menu-text">Schedule</p></div></a>
+                    </td>
+                </tr>
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-appoinment menu-active menu-icon-appoinment-active">
+                        <a href="aapoint.html" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Appointment</p></a></div>
+                    </td>
+                </tr>
+                <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-patient">
+                        <a href="apatient.html" class="non-style-link-menu"><div><p class="menu-text">Patients</p></a></div>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="dash-body">
+            <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
+                <tr >
+                    <td width="13%" >
+                    <a href="aapoint.html" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
+                    </td>
+                    <td>
+                        <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Appointment Manager</p>
+                                           
+                    </td>
+                    <td width="15%">
+                        <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
+                            Today's Date
+                        </p>
+                        <p class="heading-sub12" style="padding: 0;margin: 0;">
+                            2023-01-25                        </p>
+                    </td>
+                    <td width="10%">
+                        <button  class="btn-label"  style="display: flex;justify-content: center;align-items: center;"><img src="../img/calendar.svg" width="100%"></button>
+                    </td>
+
+
+                </tr>
+               
+                <!-- <tr>
+                    <td colspan="4" >
+                        <div style="display: flex;margin-top: 40px;">
+                        <div class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49);margin-top: 5px;">Schedule a Session</div>
+                        <a href="?action=add-session&id=none&error=0" class="non-style-link"><button  class="login-btn btn-primary btn button-icon"  style="margin-left:25px;background-image: url('../img/icons/add.svg');">Add a Session</font></button>
+                        </a>
+                        </div>
+                    </td>
+                </tr> -->
+                <tr>
+                    <td colspan="4" style="padding-top:10px;width: 100%;" >
+                    
+                        <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">All Appointments (1)</p>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="4" style="padding-top:0px;width: 100%;" >
+                        <center>
+                        <table class="filter-container" border="0" >
+                        <tr>
+                           <td width="10%">
+
+                           </td> 
+                        <td width="5%" style="text-align: center;">
+                        Date:
+                        </td>
+                        <td width="30%">
+                        <form action="" method="post">
+                            
+                            <input type="date" name="sheduledate" id="date" class="input-text filter-container-items" style="margin: 0;width: 95%;">
+
+                        </td>
+                        <td width="5%" style="text-align: center;">
+                        Doctor:
+                        </td>
+                        <td width="30%">
+                        <select name="docid" id="" class="box filter-container-items" style="width:90% ;height: 37px;margin: 0;" >
+                            <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br/>
+                                
+                            <option value=1>Test Doctor</option><br/>
+                        </select>
+                    </td>
+                    <td width="12%">
+                        <button type="submit"  name="filter" value=" Filter" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%"><a style="text-decoration: none; color: white" href="aapoint.html">Filter</a></button>
+                        </form>
+                    </td>
+
+                    </tr>
+                            </table>
+
+                        </center>
+                    </td>
+                    
+                </tr>
+                
+                                  
+                <tr>
+                   <td colspan="4">
+                       <center>
+                        <div class="abc scroll">
+                        <table width="93%" class="sub-table scrolldown" border="0">
+                        <thead>
+                        <tr>
+                                <th class="table-headin">
+                                    Patient name
+                                </th>
+                                <th class="table-headin">
+                                    
+                                    Appointment number
+                                    
+                                </th>
+                               
+                                
+                                <th class="table-headin">
+                                    Doctor
+                                </th>
+                                <th class="table-headin">
+                                    
+                                
+                                    Session Title
+                                    
+                                    </th>
+                                
+                                <th class="table-headin" style="font-size:10px">
+                                    
+                                    Session Date & Time
+                                    
+                                </th>
+                                
+                                <th class="table-headin">
+                                    
+                                    Appointment Date
+                                    
+                                </th>
+                                
+                                <th class="table-headin">
+                                    
+                                    Events
+                                    
+                                </tr>
+                        </thead>
+                        <tbody>
+                        
+                            <tr >
+                                        <td style="font-weight:600;"> &nbsp;Test Patient</td >
+                                        <td style="text-align:center;font-size:23px;font-weight:500; color: var(--btnnicetext);">
+                                        1
+                                        
+                                        </td>
+                                        <td>
+                                        Test Doctor
+                                        </td>
+                                        <td>
+                                        Test Session
+                                        </td>
+                                        <td style="text-align:center;font-size:12px;">
+                                            2050-01-01 <br>18:00
+                                        </td>
+                                        
+                                        <td style="text-align:center;">
+                                            2022-06-03
+                                        </td>
+
+                                        <td>
+                                        <div style="display:flex;justify-content: center;">
+                                        
+                                        <!--<a href="?action=view&id=1" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
+                                       &nbsp;&nbsp;&nbsp;-->
+                                       <a href="?action=drop&id=1&name=Test Patient&session=Test Session&apponum=1" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Cancel</font></button></a>
+                                       &nbsp;&nbsp;&nbsp;</div>
+                                        </td>
+                                    </tr> 
+                            </tbody>
+
+                        </table>
+                        </div>
+                        </center>
+                   </td> 
+                </tr>
+                       
+                        
+                        
+            </table>
+        </div>
+    </div>
+        </div>
+
+</body>
+</html>
